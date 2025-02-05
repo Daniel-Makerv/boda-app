@@ -1,19 +1,25 @@
 <template>
-    <div class="grid gap-4 mx-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+    <div class="grid gap-4 mx-4 bg-boda-marfil">
+        <div
+            class="bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1609151162377-794faf68b02f?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-boda-champagne bg-blend-multiply font-lovedbytheking">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-boda-terracota md:text-3xl lg:text-6xl text-outline-blue">
+                    "Momentos Especiales"</h1>
+                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-boda-terracota md:text-3xl lg:text-6xl text-outline-blue">
+                        Cada foto, un recuerdo eterno ✨
+                    </h2>
+            </div>
         </div>
-        <div class="text-center">
-            <h1>Momentos Especiales</h1>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
+        <div class="bg-boda-marfil grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
             <div v-for="(image, index) in images" :key="index">
                 <img :src="image.src" :alt="image.alt" class="h-auto max-w-full rounded-lg">
             </div>
         </div>
     </div>
 </template>
+
+
+
 
 <script>
 import { ref } from 'vue';
@@ -42,6 +48,10 @@ export default {
 
 <style>
 body {
-    background-color: #f8f8f8;
+    background-color: #F8F4E3;
 }
+.text-outline-blue {
+  text-shadow: 1px 1px 0 #FAFAFA, -1px -1px 0 #FAFAFA, 1px -1px 0 #FAFAFA, -1px 1px 0 #FAFAFA;
+}
+
 </style>

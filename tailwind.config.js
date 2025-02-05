@@ -12,8 +12,19 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                boda: {
+                    marfil: "#F8F4E3",
+                    terracota: "#E2725B",
+                    azul_noche: "#2C3E50",
+                    plata: "C0C0C0",
+                    blanco_nieve: "#FAFAFA",
+                    verde_pino: "#2F4F4F",
+                }
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans], // Fuente existente
+                lovedbytheking: ['"Loved by the King"', 'serif'], // Nueva fuente
             },
         },
     },
