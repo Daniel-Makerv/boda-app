@@ -1,7 +1,8 @@
 <template>
     <!-- section padres  -->
-    <div class="bg-cover bg-center text-white min-h-screen flex flex-col items-center justify-center p-8 text-center"
-        style="background-image: url('/images/heads-fond.png');">
+    <!-- Versión para ESCRITORIO -->
+    <div class="hidden sm:block min-h-screen flex flex-col items-center justify-center p-8 text-center 
+    bg-no-repeat bg-center bg-cover" style="background-image: url('/images/heads-fond.png');">
 
         <p class="sm:text-4xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
             El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda
@@ -33,6 +34,41 @@
             Huberto & M. del Carmen
         </p>
     </div>
+
+    <!-- Versión para MÓVILES -->
+    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center 
+    bg-no-repeat bg-center bg-cover" style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
+
+        <p class="text-2xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
+            El amor nunca se da por vencido.
+        </p>
+
+        <p class="text-lg font-lovedbytheking italic mb-8 text-white">
+            1 Corintios 13:7
+        </p>
+
+        <p class="text-xl font-lovedbytheking mb-6 text-boda-plata glow-text text-white">
+            Con la bendición de Dios y nuestros queridos padres
+        </p>
+
+        <div class="flex justify-center w-full max-w-4xl font-lovedbytheking text-white">
+            <div class="w-1/2 text-center">
+                <p class="text-2xl mt-2">M. Isabel & Jose E.</p>
+            </div>
+            <div class="w-1/2 text-center text-white">
+                <p class="text-2xl mt-2">M. de Jesús & Hipólito</p>
+            </div>
+        </div>
+
+        <p class="text-xl font-lovedbytheking mt-8 mb-4 text-white">
+            Y en compañía de nuestros padrinos
+        </p>
+
+        <p class="text-2xl font-lovedbytheking text-white">
+            Huberto & M. del Carmen
+        </p>
+    </div>
+
 
     <!--  -->
     <!-- card fotografies -->
@@ -90,21 +126,19 @@
                 <div class="text-center md:text-left md:w-1/3 md:ml-24">
                     <h3 class="italic text-pink-700 text-3xl font-semibold font-lovedbytheking">Fiesta</h3>
                     <p class="text-gray-600 mt-2">00:00 PM - 00:00 PM</p>
-                    <img src="https://www.planamayor.com.mx/wp-content/uploads/2016/11/Megaofrenda.jpg"
+                    <img src="https://fastly.4sqi.net/img/general/200x200/46235352_TXBhUS6Oqb5Dk-RnaxQlQbFvHmxs5009Mqi842e4Nvk.jpg"
                         alt="Basílica de Ocotlán" class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
                 </div>
                 <div class="md:w-2/3 md:pl-10 mt-2 xl:ml-auto lg:ml-auto md:ml-24">
-                    <h4 class="text-lg font-semibold">lorem</h4>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
-                        rerum! Repudiandae tenetur rerum cumque dolor labore repellat voluptatibus architecto accusamus
-                        nihil ut, amet temporibus eos reiciendis esse, atque unde aut.</p>
+                    <h4 class="text-lg font-semibold">Recepción - Salón Alvarado</h4>
+                    <p class="text-gray-600">Priv. Altamirano 132, 51355 San Luis Mextepec, Méx.</p>
                     <div class="mt-4 space-y-2">
-                        <button @click="openLink('https://maps.app.goo.gl/VkfWowarEQiL5XB19')"
+                        <button @click="openLink('https://maps.app.goo.gl/LrhQr2Wpc4TqsTB98')"
                             class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg mr-2">
                             Usar Google Maps
                         </button>
                         <button
-                            @click="openLink('https://ul.waze.com/ul?place=ChIJo1Xe9buLzYUR-aX3C8RGLmc&ll=19.25023530%2C-99.60523280&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location')"
+                            @click="openLink('https://ul.waze.com/ul?place=ChIJV2WlYACHzYURg-VuYvD4v-o&ll=19.30076300%2C-99.72713820&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location')"
                             class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
                     </div>
                 </div>
@@ -234,6 +268,7 @@ body {
     color: white;
     text-shadow: 0 0 10px #E2725B, 0 0 20px #E2725B, 0 0 30px #E2725B, 0 0 40px #E2725B;
 }
+
 .glow-text {
     font-size: 2rem;
     color: white;
