@@ -19,6 +19,7 @@ export default {
                     azul_noche: "#2C3E50",
                     blanco_nieve: "#FAFAFA",
                     verde_pino: "#2F4F4F",
+                    dorado: "#F7C815",
                 }
             },
             fontFamily: {

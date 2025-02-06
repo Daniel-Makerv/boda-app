@@ -1,8 +1,32 @@
 <template>
+    <!-- section inicio -->
+    <div class="relative h-screen w-full bg-cover bg-center" :style="{ backgroundImage: `url(${backgroundImage})` }">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <h1 class="text-7xl font-extrabold font-cursive text-outline-plata sm:text-8xl text-center">
+                <span class="inline-block sm:inline mr-5 text-outline-plata">Michel</span>
+                <span class="block sm:inline mr-5 text-boda-dorado">&</span>
+                <span class="inline-block sm:inline text-outline-plata">Daniel</span>
+            </h1>
+
+            <p class="text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">- ¡Nuestra Boda! -</p>
+            <img src="https://wedding-invite-naho-alex.vercel.app/img/votes/rings-votes.png" class="h-auto max-w-full rounded-lg w-28 mt-2">
+            <p class="text-xl mt-2">Sábado, 26 de abril de 2025</p>
+            <p class="mt-4 text-lg">Faltan</p>
+            <div class="flex space-x-4 mt-4">
+                <div v-for="(time, label) in countdown" :key="label"
+                    class="bg-boda-verde_pino p-4 rounded-lg text-center text-boda-marfil">
+                    <p class="text-2xl font-bold ">{{ time }}</p>
+                    <p class="text-sm">{{ label }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
     <!-- section padres  -->
     <!-- Versión para ESCRITORIO -->
     <div class="hidden sm:block min-h-screen flex flex-col items-center justify-center p-8 text-center 
-    bg-no-repeat bg-center bg-cover" style="background-image: url('/images/heads-fond.png');">
+    bg-no-repeat bg-center bg-cover"
+        style="background-image: url('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
 
         <p class="sm:text-4xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
             El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda
@@ -36,14 +60,15 @@
     </div>
 
     <!-- Versión para MÓVILES -->
-    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center 
-    bg-no-repeat bg-center bg-cover" style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
+    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center mt-4
+    bg-no-repeat bg-center bg-cover"
+        style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
 
         <p class="text-2xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
             El amor nunca se da por vencido.
         </p>
 
-        <p class="text-lg font-lovedbytheking italic mb-8 text-white">
+        <p class="text-lg italic mb-8 text-white">
             1 Corintios 13:7
         </p>
 
@@ -51,16 +76,16 @@
             Con la bendición de Dios y nuestros queridos padres
         </p>
 
-        <div class="flex justify-center w-full max-w-4xl font-lovedbytheking text-white">
-            <div class="w-1/2 text-center">
+        <div class="flex justify-center w-full max-w-4xl text-white font-lovedbytheking mt-3">
+            <div class="w-1/2 text-center ml-4">
                 <p class="text-2xl mt-2">M. Isabel & Jose E.</p>
             </div>
-            <div class="w-1/2 text-center text-white">
-                <p class="text-2xl mt-2">M. de Jesús & Hipólito</p>
+            <div class="w-1/2 text-center text-white font-lovedbytheking ml-4">
+                <p class="text-2xl mt-2 ml-4">M. de Jesús & Hipólito</p>
             </div>
         </div>
 
-        <p class="text-xl font-lovedbytheking mt-8 mb-4 text-white">
+        <p class="text-xl mt-8 mb-4 text-white">
             Y en compañía de nuestros padrinos
         </p>
 
@@ -68,11 +93,9 @@
             Huberto & M. del Carmen
         </p>
     </div>
-
-
     <!--  -->
     <!-- card fotografies -->
-    <div class="grid gap-4 mx-4 bg-pink-50">
+    <div class="grid gap-4 mx-4 bg-pink-50 mt-4">
         <div
             class="bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1609151162377-794faf68b02f?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-boda-champagne font-lovedbytheking">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
@@ -81,7 +104,7 @@
                     "Momentos Especiales"</h1>
                 <h2
                     class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-boda-terracota md:text-3xl lg:text-6xl text-outline-blue">
-                    Cada foto, un recuerdo eterno ✨
+                    "Cada foto, un recuerdo eterno 💍"
                 </h2>
             </div>
         </div>
@@ -92,59 +115,7 @@
         </div>
     </div>
     <!-- card ubication -->
-    <div class="min-h-screen bg-pink-50 p-6 mt-8">
-        <h2 class="text-center text-pink-600 text-3xl font-semibold uppercase mb-6  font-lovedbytheking">El día
-            de la boda
-        </h2>
-        <hr class="border-gray-300 my-4" />
 
-        <div class="space-y-10">
-            <!-- Ceremonia Religiosa -->
-            <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
-                <div class="text-center md:text-left md:w-1/3 md:ml-24">
-                    <h3 class="italic text-pink-700 text-3xl font-semibold font-lovedbytheking">Ceremonia religiosa</h3>
-                    <p class="text-gray-600 mt-2">02:00 PM - 03:00 PM</p>
-                    <img src="https://www.planamayor.com.mx/wp-content/uploads/2016/11/Megaofrenda.jpg"
-                        alt="Basílica de Ocotlán" class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
-                </div>
-                <div class="md:w-2/3 md:pl-10 mt-2 xl:ml-auto lg:ml-auto md:ml-24">
-                    <h4 class="text-lg font-semibold">Iglesia del Calvario Mepetec</h4>
-                    <p class="text-gray-600">Manzana 011, Espiritu Santo, 52140 Metepec, Méx.</p>
-                    <div class="mt-4 space-y-2">
-                        <button @click="openLink('https://maps.app.goo.gl/VkfWowarEQiL5XB19')"
-                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg mr-2">
-                            Usar Google Maps
-                        </button>
-                        <button
-                            @click="openLink('https://ul.waze.com/ul?place=ChIJo1Xe9buLzYUR-aX3C8RGLmc&ll=19.25023530%2C-99.60523280&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location')"
-                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-gray-300 my-4" />
-            <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
-                <div class="text-center md:text-left md:w-1/3 md:ml-24">
-                    <h3 class="italic text-pink-700 text-3xl font-semibold font-lovedbytheking">Fiesta</h3>
-                    <p class="text-gray-600 mt-2">00:00 PM - 00:00 PM</p>
-                    <img src="https://fastly.4sqi.net/img/general/200x200/46235352_TXBhUS6Oqb5Dk-RnaxQlQbFvHmxs5009Mqi842e4Nvk.jpg"
-                        alt="Basílica de Ocotlán" class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
-                </div>
-                <div class="md:w-2/3 md:pl-10 mt-2 xl:ml-auto lg:ml-auto md:ml-24">
-                    <h4 class="text-lg font-semibold">Recepción - Salón Alvarado</h4>
-                    <p class="text-gray-600">Priv. Altamirano 132, 51355 San Luis Mextepec, Méx.</p>
-                    <div class="mt-4 space-y-2">
-                        <button @click="openLink('https://maps.app.goo.gl/LrhQr2Wpc4TqsTB98')"
-                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg mr-2">
-                            Usar Google Maps
-                        </button>
-                        <button
-                            @click="openLink('https://ul.waze.com/ul?place=ChIJV2WlYACHzYURg-VuYvD4v-o&ll=19.30076300%2C-99.72713820&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location')"
-                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--  -->
     <!-- section code vestimenta -->
     <div class="bg-white flex flex-col items-center justify-center px-4 py-10">
@@ -152,7 +123,7 @@
             <h2 class="text-4xl font-semibold text-pink-600 mb-4 font-lovedbytheking">Código de Vestimenta</h2>
             <p class="text-lg text-gray-700 mb-8">
                 La novia ha estado esperando toda su vida para usar blanco en su boda, así que por favor, elige
-                cualquier otro color para nuestro día especial, así como una vestimenta formal.
+                cualquier otro color para nuestro día especial.
             </p>
             <h3 class="mt-2"><strong>¡Por favor evita negro y blanco!</strong></h3>
         </div>
@@ -198,42 +169,72 @@
 
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 export default {
+    setup() {
+        const targetDate = new Date('2025-04-26T02:00:00');
+        const backgroundImage = ref('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        const countdown = ref({ dias: 0, horas: 0, minutos: 0, segundos: 0 });
+        let interval;
+
+        const updateCountdown = () => {
+            const now = new Date();
+            const difference = targetDate - now;
+            if (difference > 0) {
+                countdown.value = {
+                    dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    horas: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
+                    minutos: String(Math.floor((difference / (1000 * 60)) % 60)).padStart(2, '0'),
+                    segundos: String(Math.floor((difference / 1000) % 60)).padStart(2, '0')
+                };
+            }
+        };
+
+        onMounted(() => {
+            updateCountdown();
+            interval = setInterval(updateCountdown, 1000);
+        });
+
+        onUnmounted(() => {
+            clearInterval(interval);
+        });
+
+        return { countdown, backgroundImage };
+    },
     data() {
         return {
             images: [
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.37.jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.33.jpeg', alt: 'Image 2', title: 'Image 2', description: 'Description for image 2' },
+                { src: '/images/WhatsApp Image 2025-02-04 at 23.13.36 (1).jpeg', alt: 'Image 2', title: 'Image 2', description: 'Description for image 2' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.37 (5).jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.35 (1).jpeg', alt: 'Image 3', title: 'Image 3', description: 'Description for image 3' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.37 (6).jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.34 (3).jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
-                { src: '/images/WhatsApp Image 2025-02-04 at 23.13.36 (1).jpeg', alt: 'Image 2', title: 'Image 2', description: 'Description for image 2' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.38 (2).jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.33 (1).jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
             ],
             faqs: [
                 {
                     question: "¿Cómo debo de vestirme para la ocasión?",
-                    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum! Repudiandae tenetur rerum cumque dolor labore repellat"
+                    answer: "La ceremonia se celebrará en un jardín y el código de vestimenta puede ser formal, semi-formal o casual, según su preferencia."
                 },
                 {
                     question: "¿Existe disponibilidad de estacionamiento en el lugar del evento?",
-                    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum! Repudiandae tenetur rerum cumque dolor labore repellat"
+                    answer: "Sí, contamos con estacionamiento tanto para la iglesia como para el lugar del evento. El estacionamiento de la iglesia es privado (tiene costo) y está ubicado a aproximadamente 100 metros de la entrada"
                 },
                 {
                     question: "¿Es posible asistir con niños?",
-                    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum! Repudiandae tenetur rerum cumque dolor labore repellat"
+                    answer: "Por supuesto! Los niños son bienvenidos a nuestra celebración."
                 },
                 {
                     question: "¿Cómo será la asignación de asientos durante el evento?",
-                    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum! Repudiandae tenetur rerum cumque dolor labore repellat"
+                    answer: "A su llegada, serán recibidos por un anfitrión que les indicará sus lugares asignados."
                 },
                 {
                     question: "¿Cuál es el clima del evento?",
-                    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rerum! Repudiandae tenetur rerum cumque dolor labore repellat"
+                    answer: "El clima puede ser fresco durante la noche, por lo que recomendamos llevar algo abrigador para mantenerse cómodo."
                 }
             ]
         };
@@ -249,6 +250,10 @@ export default {
 <style>
 body {
     background-color: #fbedff;
+}
+
+.font-cursive {
+    font-family: 'Dancing Script', cursive;
 }
 
 .text-brown-700 {
