@@ -8,7 +8,7 @@
                 <span class="inline-block sm:inline text-outline-plata">Daniel</span>
             </h1>
 
-            <p class="text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">- ¡Nuestra Boda! -</p>
+            <p class="text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">- ¡Nos Casamos! -</p>
             <img src="https://wedding-invite-naho-alex.vercel.app/img/votes/rings-votes.png" class="h-auto max-w-full rounded-lg w-28 mt-2">
             <p class="text-xl mt-2">Sábado, 26 de abril de 2025</p>
             <p class="mt-4 text-lg">Faltan</p>
