@@ -60,7 +60,7 @@
     </div>
 
     <!-- Versión para MÓVILES -->
-    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center mt-4
+    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center mt-4 
     bg-no-repeat bg-center bg-cover"
         style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
 
@@ -170,6 +170,8 @@
 
 <script>
 import { ref, onMounted, onUnmounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Estilos de AOS
 
 export default {
     setup() {
