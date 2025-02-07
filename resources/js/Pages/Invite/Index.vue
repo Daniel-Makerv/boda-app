@@ -28,20 +28,20 @@
     bg-no-repeat bg-center bg-cover"
         style="background-image: url('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
 
-        <p class="sm:text-4xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
+        <p class="sm:text-4xl text-center mb-6 max-w-5xl glow-text-outline italic">
             El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda
             circunstancia.
         </p>
 
-        <p class="text-lg sm:text-2xl font-lovedbytheking italic mb-8">
+        <p class="text-lg sm:text-2xl  italic mb-8">
             1 Corintios 13:7
         </p>
 
-        <p class="sm:text-2xl font-lovedbytheking mb-6 text-boda-plata glow-text">
+        <p class="sm:text-2xl  mb-6 text-boda-plata glow-text">
             Con la bendición de Dios y nuestros queridos padres
         </p>
 
-        <div class="flex justify-center w-full max-w-4xl font-lovedbytheking">
+        <div class="flex justify-center w-full max-w-4xl ">
             <div class="w-1/2 text-center">
                 <p class="sm:text-3xl mt-2">M. Isabel & Jose E.</p>
             </div>
@@ -50,11 +50,11 @@
             </div>
         </div>
 
-        <p class="sm:text-2xl font-lovedbytheking mt-8 mb-4">
+        <p class="sm:text-2xlmt-8 mb-4">
             Y en compañía de nuestros padrinos
         </p>
 
-        <p class="sm:text-3xl font-lovedbytheking">
+        <p class="sm:text-3xl ">
             Huberto & M. del Carmen
         </p>
     </div>
