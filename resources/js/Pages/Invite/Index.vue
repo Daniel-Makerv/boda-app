@@ -33,11 +33,11 @@
             circunstancia.
         </p>
 
-        <p class="text-lg sm:text-2xl  italic mb-8">
+        <p class="text-lg sm:text-2xl italic mb-8">
             1 Corintios 13:7
         </p>
 
-        <p class="sm:text-2xl  mb-6 text-boda-plata glow-text">
+        <p class="sm:text-2xl mb-6 text-boda-plata glow-text">
             Con la bendición de Dios y nuestros queridos padres
         </p>
 
@@ -64,7 +64,7 @@
     bg-no-repeat bg-center bg-cover"
         style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
 
-        <p class="text-2xl text-center mb-6 font-lovedbytheking max-w-5xl glow-text-outline">
+        <p class="text-2xl text-center mb-6 max-w-5xl glow-text-outline">
             El amor nunca se da por vencido.
         </p>
 
@@ -72,15 +72,15 @@
             1 Corintios 13:7
         </p>
 
-        <p class="text-xl font-lovedbytheking mb-6 text-boda-plata glow-text text-white">
+        <p class="text-xl  mb-6 text-boda-plata glow-text text-white">
             Con la bendición de Dios y nuestros queridos padres
         </p>
 
-        <div class="flex justify-center w-full max-w-4xl text-white font-lovedbytheking mt-3">
+        <div class="flex justify-center w-full max-w-4xl text-white  mt-3">
             <div class="w-1/2 text-center ml-4">
                 <p class="text-2xl mt-2">M. Isabel & Jose E.</p>
             </div>
-            <div class="w-1/2 text-center text-white font-lovedbytheking ml-4">
+            <div class="w-1/2 text-center text-white ml-4">
                 <p class="text-2xl mt-2 ml-4">M. de Jesús & Hipólito</p>
             </div>
         </div>
@@ -89,7 +89,7 @@
             Y en compañía de nuestros padrinos
         </p>
 
-        <p class="text-2xl font-lovedbytheking text-white">
+        <p class="text-2xl  text-white">
             Huberto & M. del Carmen
         </p>
     </div>
