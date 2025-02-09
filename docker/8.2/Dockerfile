@@ -13,6 +13,7 @@ ENV TZ=UTC
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+# Instalación de dependencias básicas
 RUN apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor sqlite3 libcap2-bin libpng-dev python2 dnsutils librsvg2-bin \
     && curl -sS 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x14aa40ec0831756756d7f66c4f4ea0aae5267a6c' | gpg --dearmor | tee /etc/apt/keyrings/ppa_ondrej_php.gpg > /dev/null \
@@ -40,13 +41,17 @@ RUN apt-get update \
     && apt-get install -y mysql-client \
     && apt-get install -y postgresql-client-$POSTGRES_VERSION \
     && apt-get -y autoremove \
-    && apt-get clean \
-    && apt-get install -y libmagickwand-dev \
+    && apt-get clean
+
+# Instalación de dependencias para Imagick
+RUN apt-get update \
+    && apt-get install -y libmagickwand-dev libjpeg-dev libpng-dev libvpx-dev \
     && pecl install imagick \
     && pecl install mongodb \
     && echo "extension=imagick.so" > /etc/php/8.2/cli/conf.d/20-imagick.ini \
     && echo "extension=mongodb.so" > /etc/php/8.2/cli/conf.d/20-mongodb.ini \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 # Prueba php
 RUN apt-get install -y php8.2-cli php8.2-dev php-pear && apt-get install
 
@@ -54,18 +59,12 @@ RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
 
 RUN groupadd --force -g $WWWGROUP sail
 RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
-# Instala la extensión Imagick
-RUN apt-get update \
-    && apt-get install -y libmagickwand-dev \
-    && pecl install imagick \
-    && pecl install mongodb \
-    && docker-php-ext-enable mongodb
-#    && docker-php-ext-enable imagick
-RUN echo "extension=mongodb.so" >> /etc/php/8.2/cli/conf.d/99-sail.ini
+
 COPY start-container /usr/local/bin/start-container
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY php.ini /etc/php/8.2/cli/conf.d/99-sail.ini
-RUN echo "extension=mongodb.so" >> php.ini
+RUN echo "extension=mongodb.so" >> /etc/php/8.2/cli/conf.d/99-sail.ini
+
 RUN chmod +x /usr/local/bin/start-container
 
 EXPOSE 8000
