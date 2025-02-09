@@ -42,7 +42,8 @@ RUN apt-get update \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
+    # Prueba php
+RUN apt-get install -y php8.2-cli php8.2-dev php-pear && apt-get install -y libmagickwand-dev 
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
 
 RUN groupadd --force -g $WWWGROUP sail
