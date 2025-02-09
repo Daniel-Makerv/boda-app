@@ -42,22 +42,23 @@ RUN apt-get update \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-    # Prueba php
-RUN apt-get install -y php8.2-cli php8.2-dev php-pear && apt-get install
+
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
 
 RUN groupadd --force -g $WWWGROUP sail
 RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
-
-# Instalación de Imagick echo "extension=imagick.so" > /usr/local/etc/php/conf.d/99-imagick.ini
+# Instala la extensión Imagick
 RUN apt-get update \
     && apt-get install -y libmagickwand-dev \
-    && pecl install imagick 
-    # && docker-php-ext-enable imagick
+    && pecl install imagick \
+    && pecl install mongodb \
+    && docker-php-ext-enable mongodb
+#    && docker-php-ext-enable imagick
+RUN echo "extension=mongodb.so" >> /etc/php/8.2/cli/conf.d/99-sail.ini
 COPY start-container /usr/local/bin/start-container
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY php.ini /etc/php/8.2/cli/conf.d/99-sail.ini
-
+RUN echo "extension=mongodb.so" >> php.ini
 RUN chmod +x /usr/local/bin/start-container
 
 EXPOSE 8000
