@@ -41,6 +41,11 @@ RUN apt-get update \
     && apt-get install -y postgresql-client-$POSTGRES_VERSION \
     && apt-get -y autoremove \
     && apt-get clean \
+    && apt-get install -y libmagickwand-dev \
+    && pecl install imagick \
+    && pecl install mongodb \
+    && echo "extension=imagick.so" > /etc/php/8.2/cli/conf.d/20-imagick.ini \
+    && echo "extension=mongodb.so" > /etc/php/8.2/cli/conf.d/20-mongodb.ini \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Prueba php
 RUN apt-get install -y php8.2-cli php8.2-dev php-pear && apt-get install
