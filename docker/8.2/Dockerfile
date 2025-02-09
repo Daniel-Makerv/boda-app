@@ -53,7 +53,7 @@ RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
 RUN apt-get update \
     && apt-get install -y libmagickwand-dev \
     && pecl install imagick \
-    && docker-php-ext-enable imagick
+    # && docker-php-ext-enable imagick
 
 RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/99-imagick.ini
 
