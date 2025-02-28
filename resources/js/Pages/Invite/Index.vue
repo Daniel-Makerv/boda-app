@@ -213,17 +213,23 @@
             <div class="flex flex-col md:flex-row items-center md:items-start">
                 <div class="text-center md:text-left md:w-1/3">
                     <h3 class="italic text-pink-700 text-xl font-semibold">Ceremonia religiosa</h3>
-                    <p class="text-gray-600">06:00 PM - 07:00 PM</p>
-                    <img src="/images/basilica_ocotlan.jpg" alt="Basílica de Ocotlán"
+                    <p class="text-gray-600">14:00 PM - 15:00 PM</p>
+                    <img src="/images/calvario.png" alt="Calvario de Metepec"
                         class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
                 </div>
                 <div class="md:w-2/3 md:pl-10">
-                    <h4 class="text-lg font-semibold">Basílica de Ocotlán</h4>
-                    <p class="text-gray-600">Priv. del Nte., 90100 Ocotlán, Tlax.</p>
+                    <h4 class="text-lg font-semibold">Calvario de Metepec</h4>
+                    <p class="text-gray-600">Manzana 011, Espiritu Santo, 52140 Metepec, Méx. </p>
                     <div class="mt-4 space-y-2">
-                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Google
-                            Maps</button>
-                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
+                        <a href="https://maps.app.goo.gl/9yFxeAfr28whpTcB7" target="_blank"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg text-center inline-block">
+                            Usar Google Maps
+                        </a>
+                        <a href="https://ul.waze.com/ul?place=ChIJo1Xe9buLzYUR-aX3C8RGLmc&ll=19.25023530%2C-99.60523280&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                            target="_blank"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg text-center inline-block">
+                            Usar Waze
+                        </a>
                     </div>
                 </div>
             </div>
@@ -234,17 +240,24 @@
             <div class="flex flex-col md:flex-row items-center md:items-start">
                 <div class="text-center md:text-left md:w-1/3">
                     <h3 class="italic text-pink-700 text-xl font-semibold">Fiesta</h3>
-                    <p class="text-gray-600">07:00 PM - 05:00 AM</p>
-                    <img src="/images/banquete.jpg" alt="Banquete"
+                    <p class="text-gray-600">16:00 PM - 05:00 AM</p>
+                    <img src="/images/salon-alvarado.png" alt="Banquete"
                         class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
                 </div>
                 <div class="md:w-2/3 md:pl-10">
-                    <h4 class="text-lg font-semibold">Banquete</h4>
-                    <p class="text-gray-600">Cuauhtémoc #3, 90182, La Aurora, Tepeyanco, Tlax.</p>
+                    <h4 class="text-lg font-semibold">Salón Alvarado</h4>
+                    <p class="text-gray-600">Priv. Altamirano 132, 51355 San Luis Mextepec, Méx.
+                    </p>
                     <div class="mt-4 space-y-2">
-                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Google
-                            Maps</button>
-                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
+                        <a href="https://maps.app.goo.gl/oMhydRM8qhDbSmPY7" target="_blank"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg text-center inline-block">
+                            Usar Google Maps
+                        </a>
+                        <a href="https://ul.waze.com/ul?place=ChIJV2WlYACHzYURg-VuYvD4v-o&ll=19.30076300%2C-99.72713820&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                            target="_blank"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg text-center inline-block">
+                            Usar Waze
+                        </a>
                     </div>
                 </div>
             </div>
