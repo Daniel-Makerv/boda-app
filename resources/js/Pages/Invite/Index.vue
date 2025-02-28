@@ -1,28 +1,87 @@
 <template>
-    <!-- section inicio -->
+    <!-- Sección de inicio -->
     <div class="relative h-screen w-full bg-cover bg-center" :style="{ backgroundImage: `url(${backgroundImage})` }">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 class="text-7xl font-extrabold font-cursive text-outline-plata sm:text-8xl text-center">
-                <span class="inline-block sm:inline mr-5 text-outline-plata">Michel</span>
-                <span class="block sm:inline mr-5 text-boda-dorado">&</span>
-                <span class="inline-block sm:inline text-outline-plata">Daniel</span>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+            <!-- Título -->
+            <h1 class="text-6xl sm:text-7xl font-extrabold font-cursive text-outline-plata leading-tight">
+                <span class="inline-block sm:inline font-bold text-[#CFAF5A] script-font shadow-md">Michel</span>
+                <span class="text-boda-dorado">&</span>
+                <span class="inline-block sm:inline font-bold text-[#CFAF5A] script-font shadow-md">Daniel</span>
             </h1>
+            <p class="text-3xl sm:text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">¡Nos
+                Casamos!</p>
 
-            <p class="text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">- ¡Nos Casamos! -</p>
-            <img src="https://wedding-invite-naho-alex.vercel.app/img/votes/rings-votes.png" class="h-auto max-w-full rounded-lg w-28 mt-2">
-            <p class="text-xl mt-2">Sábado, 26 de abril de 2025</p>
-            <p class="mt-4 text-lg">Faltan</p>
-            <div class="flex space-x-4 mt-4">
+            <!-- Imagen Circular -->
+            <div class="w-36 h-36 sm:w-48 sm:h-48 mt-6 rounded-full overflow-hidden border-4 border-[#f4e0d6]">
+                <img :src="imageUrl" alt="Boda" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Sección de Fecha -->
+            <div class="max-w-xs w-full mt-4 bg-[#f4e0d6] py-3 px-6 rounded-lg text-center shadow-lg">
+                <p class="text-sm font-semibold text-gray-700 tracking-wide">SÁBADO</p>
+                <p class="text-4xl font-bold text-[#6c4f4b]">29</p>
+                <p class="text-sm text-gray-700 uppercase">DICIEMBRE</p>
+                <p class="text-sm text-gray-700">A LAS 10:00</p>
+            </div>
+
+            <p class="mt-6 text-lg font-semibold">Faltan</p>
+            <div class="flex space-x-3 mt-4">
                 <div v-for="(time, label) in countdown" :key="label"
-                    class="bg-boda-verde_pino p-4 rounded-lg text-center text-boda-marfil">
-                    <p class="text-2xl font-bold ">{{ time }}</p>
-                    <p class="text-sm">{{ label }}</p>
+                    class="bg-[#f4e0d6] px-4 py-2 rounded-lg text-center text-[#6c4f4b] shadow-md">
+                    <p class="text-2xl font-bold">{{ time }}</p>
+                    <p class="text-xs uppercase">{{ label }}</p>
                 </div>
             </div>
         </div>
     </div>
     <!--  -->
     <!-- section padres  -->
+    <div class="bg-[#fdf7f0] min-h-screen flex items-center justify-center px-4 relative">
+
+        <!-- Fondo de flores -->
+
+        <img src="https://wedding-invite-naho-alex.vercel.app/img/votes/rings-votes.png" alt="Floraes"
+            class="absolute top-0 left-0 w-full opacity-90">
+        <img src="/images/flowers-bottom.png" alt="Florses" class="absolute bottom-0 right-0 w-full opacity-90">
+
+        <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-6 relative border border-[#f4e0d6]">
+
+            <!-- Imagen Circular -->
+            <div class="w-full flex justify-center">
+                <div class="relative w-40 h-40">
+                    <img :src="imageUrl" alt="Boda"
+                        class="w-40 h-40 object-cover rounded-full border-4 border-[#f4e0d6]">
+                </div>
+            </div>
+
+            <!-- Texto de la Invitación -->
+            <div class="text-center mt-4">
+                <h2 class="text-lg text-[#9b6a6c] font-semibold italic">Nuestra Boda</h2>
+                <h1 class="text-3xl font-bold text-[#6c4f4b] script-font">Alejandra y Felipe</h1>
+                <p class="text-gray-600 text-sm mt-2">
+                    Tenemos el gusto de invitarte en este día tan importante de nuestras vidas.
+                </p>
+            </div>
+
+            <!-- Sección de Fecha -->
+            <div class="mt-4 bg-[#f4e0d6] py-2 rounded-lg text-center shadow-sm">
+                <p class="text-sm font-semibold text-gray-700 tracking-wide">SÁBADO</p>
+                <p class="text-4xl font-bold text-[#6c4f4b]">29</p>
+                <p class="text-sm text-gray-700 uppercase">DICIEMBRE</p>
+                <p class="text-sm text-gray-700">A LAS 10:00</p>
+            </div>
+
+            <!-- Dirección y Contacto -->
+            <div class="text-center mt-4 text-gray-700 text-sm">
+                <p>Calle Cualquiera 123, Cualquier Lugar</p>
+                <p>Confirmar Asistencia al: (55) 1234-5678</p>
+            </div>
+
+            <p class="text-center text-lg text-[#9b6a6c] font-semibold mt-4 italic">¡Te esperamos!</p>
+
+        </div>
+    </div>
+    <!--  -->
     <!-- Versión para ESCRITORIO -->
     <div class="hidden sm:block min-h-screen flex flex-col items-center justify-center p-8 text-center 
     bg-no-repeat bg-center bg-cover"
@@ -144,9 +203,59 @@
     </div>
     <!--  -->
 
+    <!-- luegares -->
+    <div class="min-h-screen bg-pink-50 p-6">
+        <h2 class="text-4xl font-semibold text-center text-pink-600 mb-4 font-lovedbytheking">
+            El día de la boda
+        </h2>
+        <div class="space-y-10">
+            <!-- Ceremonia Religiosa -->
+            <div class="flex flex-col md:flex-row items-center md:items-start">
+                <div class="text-center md:text-left md:w-1/3">
+                    <h3 class="italic text-pink-700 text-xl font-semibold">Ceremonia religiosa</h3>
+                    <p class="text-gray-600">06:00 PM - 07:00 PM</p>
+                    <img src="/images/basilica_ocotlan.jpg" alt="Basílica de Ocotlán"
+                        class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
+                </div>
+                <div class="md:w-2/3 md:pl-10">
+                    <h4 class="text-lg font-semibold">Basílica de Ocotlán</h4>
+                    <p class="text-gray-600">Priv. del Nte., 90100 Ocotlán, Tlax.</p>
+                    <div class="mt-4 space-y-2">
+                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Google
+                            Maps</button>
+                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-300 my-4" />
+
+            <!-- Fiesta -->
+            <div class="flex flex-col md:flex-row items-center md:items-start">
+                <div class="text-center md:text-left md:w-1/3">
+                    <h3 class="italic text-pink-700 text-xl font-semibold">Fiesta</h3>
+                    <p class="text-gray-600">07:00 PM - 05:00 AM</p>
+                    <img src="/images/banquete.jpg" alt="Banquete"
+                        class="w-40 h-40 rounded-full mx-auto md:mx-0 mt-4" />
+                </div>
+                <div class="md:w-2/3 md:pl-10">
+                    <h4 class="text-lg font-semibold">Banquete</h4>
+                    <p class="text-gray-600">Cuauhtémoc #3, 90182, La Aurora, Tepeyanco, Tlax.</p>
+                    <div class="mt-4 space-y-2">
+                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Google
+                            Maps</button>
+                        <button class="w-full md:w-auto px-4 py-2 border border-gray-400 rounded-lg">Usar Waze</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
 
     <!-- section questions  -->
-    <div class="bg-pink-50 text-dark py-10 px-6 md:px-20">
+    <div class="bg-white text-dark py-10 px-6 md:px-20">
         <div class="text-center mb-8">
             <div class="flex justify-center mb-4">
                 <img src="https://invitacionesdigitales.io/storage/invitation-types/demos/boda/primer-baile.svg"
@@ -174,6 +283,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Estilos de AOS
 
 export default {
+
     setup() {
         const targetDate = new Date('2025-04-26T02:00:00');
         const backgroundImage = ref('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -206,6 +316,8 @@ export default {
     },
     data() {
         return {
+            imageUrl: '/images/WhatsApp Image 2025-02-04 at 23.13.36 (1).jpeg', // Reemplaza con la URL correcta de la imagen de la pareja
+
             images: [
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.37.jpeg', alt: 'Image 1', title: 'Image 1', description: 'Description for image 1' },
                 { src: '/images/WhatsApp Image 2025-02-04 at 23.13.33.jpeg', alt: 'Image 2', title: 'Image 2', description: 'Description for image 2' },
@@ -220,19 +332,15 @@ export default {
             faqs: [
                 {
                     question: "¿Cómo debo de vestirme para la ocasión?",
-                    answer: "La ceremonia se celebrará en un jardín y el código de vestimenta puede ser formal, semi-formal o casual, según su preferencia."
+                    answer: "La ceremonia se celebrará en el calvario de metepec y el código de vestimenta puede ser formal, semi-formal o casual, según su preferencia."
                 },
                 {
                     question: "¿Existe disponibilidad de estacionamiento en el lugar del evento?",
-                    answer: "Sí, contamos con estacionamiento tanto para la iglesia como para el lugar del evento. El estacionamiento de la iglesia es privado (tiene costo) y está ubicado a aproximadamente 100 metros de la entrada"
+                    answer: "Sí, contamos con estacionamiento tanto para la iglesia como para el lugar del evento."
                 },
                 {
                     question: "¿Es posible asistir con niños?",
                     answer: "Por supuesto! Los niños son bienvenidos a nuestra celebración."
-                },
-                {
-                    question: "¿Cómo será la asignación de asientos durante el evento?",
-                    answer: "A su llegada, serán recibidos por un anfitrión que les indicará sus lugares asignados."
                 },
                 {
                     question: "¿Cuál es el clima del evento?",
@@ -249,7 +357,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* Fuente personalizada para los nombres */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.script-font {
+    font-family: 'Great Vibes', cursive;
+}
+
 body {
     background-color: #fbedff;
 }
