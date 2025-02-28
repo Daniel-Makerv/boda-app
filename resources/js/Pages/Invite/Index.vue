@@ -36,121 +36,54 @@
     </div>
     <!--  -->
     <!-- section padres  -->
-    <div class="bg-[#fdf7f0] min-h-screen flex items-center justify-center px-4 relative">
-
-        <!-- Fondo de flores -->
-
-        <img src="https://wedding-invite-naho-alex.vercel.app/img/votes/rings-votes.png" alt="Floraes"
-            class="absolute top-0 left-0 w-full opacity-90">
-        <img src="/images/flowers-bottom.png" alt="Florses" class="absolute bottom-0 right-0 w-full opacity-90">
-
-        <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-6 relative border border-[#f4e0d6]">
-
-            <!-- Imagen Circular -->
-            <div class="w-full flex justify-center">
-                <div class="relative w-40 h-40">
-                    <img :src="imageUrl" alt="Boda"
-                        class="w-40 h-40 object-cover rounded-full border-4 border-[#f4e0d6]">
-                </div>
+    <div class="bg-pink-50 flex items-center justify-center p-6">
+        <div class="bg-white shadow-lg p-8 rounded-lg w-full text-center relative">
+            <!-- Decoración superior -->
+            <div class="absolute top-0 left-0 w-16 h-18">
+                <img src="/images/rosas-sin-fondo.png" alt="decoración" class="w-full">
             </div>
 
-            <!-- Texto de la Invitación -->
-            <div class="text-center mt-4">
-                <h2 class="text-lg text-[#9b6a6c] font-semibold italic">Nuestra Boda</h2>
-                <h1 class="text-3xl font-bold text-[#6c4f4b] script-font">Alejandra y Felipe</h1>
-                <p class="text-gray-600 text-sm mt-2">
-                    Tenemos el gusto de invitarte en este día tan importante de nuestras vidas.
+            <!-- Texto principal -->
+            <h2 class="text-sm uppercase tracking-widest text-pink-400 font-semibold mt-4">
+                Con la bendición de nuestros padres
+            </h2>
+
+            <!-- Padres de la novia -->
+            <div class="mt-10">
+                <h3 class="text-lg font-semibold">PADRES DE LA NOVIA</h3>
+                <p class="italic text-xl font-light">
+                    <span class="font-cursive">M. Isabel </span>
+                </p>
+                <p class="italic text-xl font-light flex items-center justify-center gap-2">
+                    <span class="text-black">✝</span>
+                    <span class="font-cursive">Jose E.</span>
                 </p>
             </div>
 
-            <!-- Sección de Fecha -->
-            <div class="mt-4 bg-[#f4e0d6] py-2 rounded-lg text-center shadow-sm">
-                <p class="text-sm font-semibold text-gray-700 tracking-wide">SÁBADO</p>
-                <p class="text-4xl font-bold text-[#6c4f4b]">29</p>
-                <p class="text-sm text-gray-700 uppercase">DICIEMBRE</p>
-                <p class="text-sm text-gray-700">A LAS 10:00</p>
+            <!-- Separador con texto -->
+            <div class="my-18 w-full h-16 bg-gray-200 rounded-md flex items-center justify-center mt-4">
+                <span class="text-1xl font-semibold  uppercase text-pink-600 font-lovedbytheking">El amor nunca se da por vencido, jamás
+                    pierde la fe, siempre tiene esperanzas y se mantiene firme en toda 
+                    circunstancia. 🕊️</span>
             </div>
 
-            <!-- Dirección y Contacto -->
-            <div class="text-center mt-4 text-gray-700 text-sm">
-                <p>Calle Cualquiera 123, Cualquier Lugar</p>
-                <p>Confirmar Asistencia al: (55) 1234-5678</p>
+            <!-- Padres del novio -->
+            <div class="mt-10">
+                <h3 class="text-lg font-semibold">PADRES DEL NOVIO</h3>
+                <p class="italic text-xl font-light">
+                    <span class="font-cursive">M. de Jesús</span>
+                </p>
+                <p class="italic text-xl font-light flex items-center justify-center gap-2">
+                    <span class="text-black">✝</span>
+                    <span class="font-cursive">Hipólito</span>
+                </p>
             </div>
 
-            <p class="text-center text-lg text-[#9b6a6c] font-semibold mt-4 italic">¡Te esperamos!</p>
-
-        </div>
-    </div>
-    <!--  -->
-    <!-- Versión para ESCRITORIO -->
-    <div class="hidden sm:block min-h-screen flex flex-col items-center justify-center p-8 text-center 
-    bg-no-repeat bg-center bg-cover"
-        style="background-image: url('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-
-        <p class="sm:text-4xl text-center mb-6 max-w-5xl glow-text-outline italic">
-            El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda
-            circunstancia.
-        </p>
-
-        <p class="text-lg sm:text-2xl italic mb-8">
-            1 Corintios 13:7
-        </p>
-
-        <p class="sm:text-2xl mb-6 text-boda-plata glow-text">
-            Con la bendición de Dios y nuestros queridos padres
-        </p>
-
-        <div class="flex justify-center w-full max-w-4xl ">
-            <div class="w-1/2 text-center">
-                <p class="sm:text-3xl mt-2">M. Isabel & Jose E.</p>
-            </div>
-            <div class="w-1/2 text-center">
-                <p class="sm:text-3xl mt-2">M. de Jesús & Hipólito</p>
+            <!-- Decoración inferior -->
+            <div class="absolute bottom-0 right-0 w-16 h-16">
+                <img src="/images/rosas-sin-fondo.png" alt="decoración" class="w-full">
             </div>
         </div>
-
-        <p class="sm:text-2xlmt-8 mb-4">
-            Y en compañía de nuestros padrinos
-        </p>
-
-        <p class="sm:text-3xl ">
-            Huberto & M. del Carmen
-        </p>
-    </div>
-
-    <!-- Versión para MÓVILES -->
-    <div class="block sm:hidden min-h-screen flex flex-col items-center justify-center p-8 text-center mt-4 
-    bg-no-repeat bg-center bg-cover"
-        style="background-image: url('/images/WhatsApp Image 2025-02-04 at 23.13.38.jpeg');">
-
-        <p class="text-2xl text-center mb-6 max-w-5xl glow-text-outline">
-            El amor nunca se da por vencido.
-        </p>
-
-        <p class="text-lg italic mb-8 text-white">
-            1 Corintios 13:7
-        </p>
-
-        <p class="text-xl  mb-6 text-boda-plata glow-text text-white">
-            Con la bendición de Dios y nuestros queridos padres
-        </p>
-
-        <div class="flex justify-center w-full max-w-4xl text-white  mt-3">
-            <div class="w-1/2 text-center ml-4">
-                <p class="text-2xl mt-2">M. Isabel & Jose E.</p>
-            </div>
-            <div class="w-1/2 text-center text-white ml-4">
-                <p class="text-2xl mt-2 ml-4">M. de Jesús & Hipólito</p>
-            </div>
-        </div>
-
-        <p class="text-xl mt-8 mb-4 text-white">
-            Y en compañía de nuestros padrinos
-        </p>
-
-        <p class="text-2xl  text-white">
-            Huberto & M. del Carmen
-        </p>
     </div>
     <!--  -->
     <!-- card fotografies -->
@@ -265,8 +198,6 @@
     </div>
 
     <!--  -->
-
-
     <!-- section questions  -->
     <div class="bg-white text-dark py-10 px-6 md:px-20">
         <div class="text-center mb-8">
@@ -373,6 +304,10 @@ export default {
 <style scoped>
 /* Fuente personalizada para los nombres */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.font-cursive {
+    font-family: 'Dancing Script', cursive;
+}
 
 .script-font {
     font-family: 'Great Vibes', cursive;
