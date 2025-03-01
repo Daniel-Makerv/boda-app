@@ -55,7 +55,7 @@
                     <span class="font-cursive">M. Isabel </span>
                 </p>
                 <p class="italic text-xl font-light flex items-center justify-center gap-2">
-                    <span class="text-black">🕊️</span>
+                    <span class="text-black">&</span>
                     <span class="font-cursive">Jose E.</span>
                 </p>
             </div>
@@ -75,7 +75,7 @@
                     <span class="font-cursive">M. de Jesús</span>
                 </p>
                 <p class="italic text-xl font-light flex items-center justify-center gap-2">
-                    <span class="text-black">🕊️</span>
+                    <span class="text-black">&</span>
                     <span class="font-cursive">Hipólito</span>
                 </p>
             </div>
