@@ -3,11 +3,18 @@
     <div class="relative h-screen w-full bg-cover bg-center" :style="{ backgroundImage: `url(${backgroundImage})` }">
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
             <!-- Título -->
-            <h1 class="text-6xl sm:text-7xl font-extrabold font-cursive text-outline-plata leading-tight">
-                <span class="inline-block sm:inline font-bold text-[#CFAF5A] script-font shadow-md">Michel</span>
-                <span class="text-boda-dorado">&</span>
-                <span class="inline-block sm:inline font-bold text-[#CFAF5A] script-font shadow-md">Daniel</span>
+            <h1 class="text-6xl sm:text-7xl font-extrabold font-cursive text-outline-plata leading-tight text-center">
+                <span class="inline-block font-bold text-[#CFAF5A] script-font shadow-md">Michel</span>
+
+                <!-- Para móviles: & en una línea separada -->
+                <span class="block sm:hidden text-boda-dorado text-5xl">&</span>
+
+                <!-- Para pantallas grandes: & en la misma línea -->
+                <span class="hidden sm:inline text-boda-dorado">&</span>
+
+                <span class="inline-block font-bold text-[#CFAF5A] script-font shadow-md">Daniel</span>
             </h1>
+
             <p class="text-3xl sm:text-4xl mt-2 text-boda-verde_pino font-lovedbytheking text-outline-plata">¡Nos
                 Casamos!</p>
 
