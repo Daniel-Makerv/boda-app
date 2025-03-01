@@ -55,15 +55,16 @@
                     <span class="font-cursive">M. Isabel </span>
                 </p>
                 <p class="italic text-xl font-light flex items-center justify-center gap-2">
-                    <span class="text-black">✝</span>
+                    <span class="text-black">🕊️</span>
                     <span class="font-cursive">Jose E.</span>
                 </p>
             </div>
 
             <!-- Separador con texto -->
             <div class="my-18 w-full h-16 bg-gray-200 rounded-md flex items-center justify-center mt-4">
-                <span class="text-1xl font-semibold  uppercase text-pink-600 font-lovedbytheking">El amor nunca se da por vencido, jamás
-                    pierde la fe, siempre tiene esperanzas y se mantiene firme en toda 
+                <span class="text-1xl font-semibold  uppercase text-pink-600 font-lovedbytheking">El amor nunca se da
+                    por vencido, jamás
+                    pierde la fe, siempre tiene esperanzas y se mantiene firme en toda
                     circunstancia. 🕊️</span>
             </div>
 
@@ -74,7 +75,7 @@
                     <span class="font-cursive">M. de Jesús</span>
                 </p>
                 <p class="italic text-xl font-light flex items-center justify-center gap-2">
-                    <span class="text-black">✝</span>
+                    <span class="text-black">🕊️</span>
                     <span class="font-cursive">Hipólito</span>
                 </p>
             </div>
@@ -280,7 +281,7 @@ export default {
                 },
                 {
                     question: "¿Existe disponibilidad de estacionamiento en el lugar del evento?",
-                    answer: "Sí, contamos con estacionamiento tanto para la iglesia como para el lugar del evento."
+                    answer: "Si, la iglesia cuenta con un estacionamiento externo con un costo adicional, así como el salón con costo de $40 pesos tiempo libre.",
                 },
                 {
                     question: "¿Es posible asistir con niños?",
