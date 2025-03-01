@@ -19,9 +19,9 @@
             <!-- Sección de Fecha -->
             <div class="max-w-xs w-full mt-4 bg-[#f4e0d6] py-3 px-6 rounded-lg text-center shadow-lg">
                 <p class="text-sm font-semibold text-gray-700 tracking-wide">SÁBADO</p>
-                <p class="text-4xl font-bold text-[#6c4f4b]">29</p>
-                <p class="text-sm text-gray-700 uppercase">DICIEMBRE</p>
-                <p class="text-sm text-gray-700">A LAS 10:00</p>
+                <p class="text-4xl font-bold text-[#6c4f4b]">26</p>
+                <p class="text-sm text-gray-700 uppercase">ABRIL</p>
+                <p class="text-sm text-gray-700">A LAS 04:00 PM</p>
             </div>
 
             <p class="mt-6 text-lg font-semibold">Faltan</p>
