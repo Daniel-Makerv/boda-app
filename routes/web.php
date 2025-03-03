@@ -39,6 +39,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [InviteInviteController::class, 'index'])->name('invite.index');
 
-Route::get('/invite/user', [InviteInviteController::class, 'inviteUser'])->name('invite.user');
+Route::get('/invite', [InviteInviteController::class, 'inviteUser'])->name('invite.user');
 
 require __DIR__.'/auth.php';

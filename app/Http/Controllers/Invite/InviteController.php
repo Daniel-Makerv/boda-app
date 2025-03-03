@@ -63,5 +63,10 @@ class InviteController extends Controller
     public function destroy(string $id)
     {
         //
+        
+    }
+
+    public function inviteUser(){
+        return Inertia('Invite/IndexUser');
     }
 }
