@@ -36,6 +36,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/invite', [InviteInviteController::class, 'index'])->name('invite.index');
+
+Route::get('/', [InviteInviteController::class, 'index'])->name('invite.index');
+
+Route::get('/invite/user', [InviteInviteController::class, 'inviteUser'])->name('invite.user');
 
 require __DIR__.'/auth.php';
