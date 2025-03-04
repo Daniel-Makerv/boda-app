@@ -7,7 +7,7 @@ services:
         ports:
             - "80:80" # Nginx manejará las peticiones en el puerto 80
         volumes:
-            - ./nginx/nginx.conf:/etc/nginx/sites-available/laravel
+            - ./nginx/nginx.conf/laravel
         depends_on:
             - laravel.test
         networks:
