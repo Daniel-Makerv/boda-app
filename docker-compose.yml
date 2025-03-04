@@ -63,6 +63,8 @@ services:
 networks:
     sail:
         driver: bridge
+    boda-app_sail:
+        external: true  # Usamos la red existente
 
 volumes:
     sail-mysql:
