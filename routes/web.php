@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/', [InviteInviteController::class, 'index'])->name('invite.index');
+Route::get('/', [InviteInviteController::class, 'inviteUser'])->name('invite.index');
 
 Route::get('/invite', [InviteInviteController::class, 'inviteUser'])->name('invite.user');
 
